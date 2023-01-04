@@ -1,0 +1,35 @@
+{
+  "tableWidth": 10,
+  "tableHeight": 10,
+  "snakeLengthDef": 3,
+  "appleMaxCount": 1,
+  "pointWhenAppleEat": 10,
+  "pointPerSecond": 1,
+  "difficulty": [
+    {
+      "name": "ultra-easy",
+      "speed": 2,
+      "pointsMultiplier": 0.5
+    },
+    {
+      "name": "easy",
+      "speed": 4,
+      "pointsMultiplier": 1
+    },
+    {
+      "name": "normal",
+      "speed": 6,
+      "pointsMultiplier": 2
+    },
+    {
+      "name": "hard",
+      "speed": 8,
+      "pointsMultiplier": 5
+    },
+    {
+      "name": "impossible",
+      "speed": 10,
+      "pointsMultiplier": 10
+    }
+  ]
+}

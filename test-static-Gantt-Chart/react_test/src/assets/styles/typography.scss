@@ -1,0 +1,47 @@
+@mixin font($fontFamily, $fontPath, $fontWeight) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url("../fonts/" + $fontPath + ".ttf") format("ttf");
+    font-weight: $fontWeight;
+    font-style: normal;
+  }
+}
+
+@include font("Roboto", "Roboto-Black", 700);
+@include font("Roboto", "Roboto-Bold", 600);
+@include font("Roboto", "Roboto-Medium", 500);
+@include font("Roboto", "Roboto-Regular", 400);
+@include font("Roboto", "Roboto-Light", 300);
+@include font("Roboto", "Roboto-Thin", 200);
+
+.rob-400{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.rob-400-12-16{
+  @extend .rob-400;
+  font-size: 12px;
+  line-height: 16px;
+}
+.rob-400-14-18{
+  @extend .rob-400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.rob-400-24-28, h1{
+  @extend .rob-400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.rob-500{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.rob-500-14-18{
+  @extend .rob-500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+

@@ -1,0 +1,18 @@
+.board {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px 40px 0 0;
+  &_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+.key {
+  display: block;
+  width: 40px;
+  height: 40px;
+}

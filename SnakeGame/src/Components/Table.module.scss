@@ -1,0 +1,81 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 50px 0 0 0;
+}
+.tableRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px #000 solid;
+  &:last-child {
+    border-bottom: 1px #000 solid;
+  }
+}
+.tableItem {
+  width: 50px;
+  height: 50px;
+  border-left: 1px #000 solid;
+  &:last-child {
+    border-right: 1px #000 solid;
+  }
+}
+.snake {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: green;
+}
+.apple {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: red;
+  border-radius: 100%;
+}
+
+.eyes {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    left: calc(50% - 10px);
+    top: 5%;
+  }
+  &:after {
+    left: calc(50% + 4px);
+  }
+
+  &_top {
+    transform: rotate(0deg);
+  }
+  &_right {
+    transform: rotate(90deg);
+  }
+  &_bottom {
+    transform: rotate(180deg);
+  }
+  &_left {
+    transform: rotate(-90deg);
+  }
+}
+
+.arrow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}

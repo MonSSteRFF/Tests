@@ -1,0 +1,20 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+
+  font-family: var(--defaultFont);
+  font-weight: var(--defaultFontWeight);
+  font-size: 14px;
+  line-height: 140%;
+
+  color: var(--black);
+}
+
+@media screen and (max-width: 576px){
+
+}

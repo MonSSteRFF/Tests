@@ -1,0 +1,11 @@
+[
+  { "name": "RUB", "icon": "₽", "fullName": "Russia Ruble" },
+  { "name": "EUR", "icon": "€", "fullName": "Euro Member Countries" },
+  { "name": "USD", "icon": "$", "fullName": "United States Dollar" },
+  { "name": "CNY", "icon": "¥", "fullName": "China Yuan Renminbi" },
+  { "name": "CRC", "icon": "₡", "fullName": "Costa Rica Colon" },
+  { "name": "SAR", "icon": "﷼", "fullName": "Saudi Arabia Riyal" },
+  { "name": "KZT", "icon": "₸", "fullName": "Kazakhstan Tenge" },
+  { "name": "KRW", "icon": "₩", "fullName": "Korea (South) Won" },
+  { "name": "TRY", "icon": "₺", "fullName": "Turkey Lira" }
+]

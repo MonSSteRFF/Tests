@@ -1,0 +1,71 @@
+:root {
+  --transparent: transparent;
+  --white: #ffffff;
+  --black: #000000;
+  --whiteBlue: #EFF9FF;
+  --lightBlue: #CBECFF;
+  --lightBlue1: #E2F3FF;
+  --lightBlue2: #E9F6FF;
+  --blue: #0962E8;
+  --darkBlue: #29374E;
+
+  --defaultFont: 'Euclid Circular A', sans-serif;
+  --defaultFontWeight: 400;
+
+  --blockShadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+  --blockShadowHover: inset 3px -3px 12px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin-bottom: 500px;
+}
+
+.container {
+  width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.btn {
+  display: block;
+  padding: 14px 37px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+.btn_blue {
+  background-color: var(--blue);
+  color: var(--white);
+  transition: background-color .4s;
+}
+
+.btn_blue:hover {
+  background-color: var(--darkBlue);
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 100%;
+  }
+  .btn{
+    width: 100%;
+  }
+}
+
+
+.anim_end{
+  opacity: 1;
+  bottom: 0;
+  position: relative;
+
+  transition-property: opacity, bottom;
+}
+.anim_hide_bottom{
+  opacity: 0;
+  bottom: -200px;
+}
+

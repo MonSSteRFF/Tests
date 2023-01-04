@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RimCalculator/static/css/main.14f2c9fa.css",
+    "main.js": "/RimCalculator/static/js/main.8d698fc9.js",
+    "index.html": "/RimCalculator/index.html",
+    "main.14f2c9fa.css.map": "/RimCalculator/static/css/main.14f2c9fa.css.map",
+    "main.8d698fc9.js.map": "/RimCalculator/static/js/main.8d698fc9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14f2c9fa.css",
+    "static/js/main.8d698fc9.js"
+  ]
+}

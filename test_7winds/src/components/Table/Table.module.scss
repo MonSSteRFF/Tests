@@ -1,0 +1,127 @@
+@import "../../assets/styles/App.module";
+
+.table{
+  padding: 0 10px;
+  width: 100%;
+  height: calc(100% - 45px);
+  overflow-y: auto;
+  
+  &__createFirstBtn{
+    cursor: pointer;
+    padding: 12px;
+  }
+
+  &__mainRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__text{
+      padding: 12px;
+      color: $gray;
+      min-width: 200px;
+      max-width: 200px;
+      white-space: nowrap;
+
+      &:nth-child(1){
+        min-width: 110px;
+        max-width: 110px;
+      }
+      &:nth-child(2){
+        min-width: auto;
+        max-width: none;
+        width: 100%;
+      }
+
+    }
+  }
+  &__row{
+    border-top: $border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    &__p{
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+
+      min-width: 200px;
+      max-width: 200px;
+      white-space: nowrap;
+      &:nth-child(1){
+        min-width: 110px;
+        max-width: 110px;
+      }
+      &:nth-child(2){
+        min-width: auto;
+        max-width: none;
+        width: 100%;
+      }
+
+      &__input{
+        color: $whiteFocus;
+        padding: 10px;
+        border: $border;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+.iconsBlock{
+  display: flex;
+  align-items: center;
+  padding: 2px 3px;
+  background: transparent;
+  border-radius: 6px;
+  position: relative;
+  z-index: 5;
+  &__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    font-size: 0;
+    position: relative;
+    z-index: 4;
+    &:not(:last-child){
+      margin-right: 2px;
+    }
+    &:not(:first-child){
+      opacity: 0;
+    }
+  }
+
+  &:hover{
+    background: $darkGray;
+    .iconsBlock__icon{
+      opacity: 1;
+    }
+  }
+
+
+}
+.gLine{
+  position: absolute;
+  z-index: 1;
+  bottom: 29px;
+  display: block;
+  width: 15px;
+  height: 61px;
+  border-left: 1px #c6c6c6 solid;
+  border-bottom: 1px #c6c6c6 solid;
+}
+
+.iLine{
+  position: absolute;
+  z-index: 1;
+  left: 24px;
+  top: 29px;
+  display: block;
+  height: 61px;
+  border-left: 1px #c6c6c6 solid;
+}
+
+
