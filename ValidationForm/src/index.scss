@@ -1,0 +1,33 @@
+*,*:before,*:after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+}
+
+.formWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 100%;
+  height: 100vh;
+}
+
+
+.myTestForm{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  .title{
+    margin: 40px 0 20px 0;
+  }
+
+  > div.MuiTextField-root{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
