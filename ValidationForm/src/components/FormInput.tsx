@@ -1,9 +1,23 @@
 import { TextField } from '@mui/material';
 import React from 'react';
 
-import { inputType } from '../hooks/useInput';
+import { inputType, T_inputChangeHandler } from '../hooks/useInput';
 
-const FormInput: React.FC<{ input: any }> = ({ input }) => {
+interface I_FormInput {
+  value: string;
+  inputChangeHandler: T_inputChangeHandler;
+  required: boolean;
+  label: string;
+  type: inputType;
+  isError: boolean;
+  helperText: string;
+}
+
+interface FormInputProps {
+  input: I_FormInput;
+}
+
+const FormInput: React.FC<FormInputProps> = ({ input }) => {
   const { value, inputChangeHandler, required, label, type, isError, helperText } = input;
 
   return (
@@ -23,3 +37,4 @@ const FormInput: React.FC<{ input: any }> = ({ input }) => {
 };
 
 export default FormInput;
+export type { I_FormInput };

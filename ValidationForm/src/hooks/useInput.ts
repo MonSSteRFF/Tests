@@ -17,7 +17,20 @@ interface useInputOptions {
   label: string;
 }
 
-type T_useInput = (options: useInputOptions) => any;
+interface I_useInputOutput {
+  value: string;
+  inputChangeHandler: T_inputChangeHandler;
+  required: boolean;
+  label: string;
+  type: inputType;
+  isError: boolean;
+  helperText: string;
+  manualChange: (value: string) => void;
+  manualChangeError: (value?: string) => void;
+  clearError: () => void;
+}
+
+type T_useInput = (options: useInputOptions) => I_useInputOutput;
 
 const nameReg = new RegExp('^[A-zА-яЁё]+$');
 const telReg = new RegExp('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$');
@@ -43,6 +56,13 @@ const useInput: T_useInput = ({ initValue, type, errorText, required, label }) =
         break;
       }
       case inputType.message: {
+        if (nameReg.test(newValue)) {
+          setIsError(false);
+          setHelperTextValue('');
+        } else {
+          setIsError(true);
+          setHelperTextValue(errorText);
+        }
         break;
       }
       case inputType.tel: {
@@ -70,11 +90,16 @@ const useInput: T_useInput = ({ initValue, type, errorText, required, label }) =
     setHelperTextValue(error !== undefined ? error : errorText);
   };
 
+  const clearError = () => {
+    setIsError(false);
+  }
+
   return {
     value,
     inputChangeHandler,
     manualChange,
     manualChangeError,
+    clearError,
     required,
     label,
     type,
@@ -85,3 +110,4 @@ const useInput: T_useInput = ({ initValue, type, errorText, required, label }) =
 
 export default useInput;
 export { inputType };
+export type { T_inputChangeHandler };
