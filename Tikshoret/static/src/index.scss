@@ -1,0 +1,112 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+
+  transition-duration: 0.2s;
+  transition-property: background-color, color;
+  list-style: none;
+}
+
+a {
+  color: black;
+  &:hover {
+    color: #e12248;
+    text-decoration: underline;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.icon {
+  cursor: pointer;
+  color: #aaa;
+  font-size: 1.2em;
+  margin-right: 11px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  &:hover {
+    color: #e12248;
+  }
+
+  &:before,
+  &:after {
+    font-family: "Font Awesome 6 Free";
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:after {
+    font-family: "Font Awesome 5 Brands";
+  }
+
+  &.search:before {
+    font-weight: 900;
+    content: "\f002";
+  }
+  &.menu:before {
+    font-weight: 900;
+    content: "\f0c9";
+    color: #e12248;
+  }
+  &.twitter:after {
+    content: "\f081";
+  }
+  &.facebook:after {
+    content: "\f082";
+  }
+  &.instagram:after {
+    content: "\f16d";
+  }
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &.red {
+    color: #fff;
+    background-color: #e12248;
+    border: 1px solid transparent;
+    &:hover {
+      background-color: #c61c3e;
+      color: white;
+    }
+  }
+  &.white {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    &:hover {
+      color: white;
+      background-color: #e12248;
+      border: 1px solid transparent;
+    }
+  }
+}
